@@ -13,7 +13,7 @@ app.get('/', async (req, res) => {
 
     let data = await getCurrenciesRates(axios, query);
 
-    data = makeRandomTransactions(baseUrl, query, data);
+    data = generateRandomTransactions(baseUrl, query, data);
 
     postProcessTransactions();
 
@@ -27,21 +27,15 @@ async function getCurrenciesRates(client, query) {
     return data;
 };
 
-function makeRandomTransactions(baseUrl, query, data) {
+function generateRandomTransactions(baseUrl, query, data) {
 
     let transactions = [];
     
     for (let i=0; i<10; i++) {
         const currency = setRandomCurrency(Object.entries(data.rates));
-        console.log(currency)
         const amount = setRandomAmount(100, 1000);
-        const transaction = new Transaction(
-            currency,
-            amount,
-            baseUrl, 
-            query
-        );
-        transactions.push(transaction.init())
+        const transaction = new Transaction(currency, amount, baseUrl, query, i);
+        transactions.push(transaction.init());
     }
     return transactions;
 };
