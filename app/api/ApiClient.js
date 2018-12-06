@@ -14,8 +14,6 @@ class ApiClient {
         baseURL: this.baseURL,
       };
       const input = `${query}`;
-
-      console.log('request::::', this.baseURL + query)
       
       return client
         .get(input, conParams)
