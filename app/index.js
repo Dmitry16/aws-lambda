@@ -27,7 +27,7 @@ app.get('/', async (req, res) => {
 });
 
 app.post('/', (req, res) => {
-    console.log('post:::', req.body)
+    // console.log('post::', req.body)
     const response = {
         "success": true,
         "passed": 1,

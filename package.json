@@ -6,8 +6,8 @@
   "config": {
     "s3BucketName": "zlick-bucket",
     "region": "eu-west-1",
-    "cloudFormationStackName": "AwsServerlessExpressStack",
-    "functionName": "AwsServerlessExpressFunction",
+    "cloudFormationStackName": "Zlick",
+    "functionName": "Zlick",
     "accountId": "860595185481"
   },
   "scripts": {

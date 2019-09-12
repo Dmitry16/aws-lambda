@@ -46,7 +46,7 @@ Resources:
     Type: AWS::Serverless::Api
   AwsServerlessExpressFunction:
     Properties:
-      CodeUri: s3://zlick-bucket/dba954f73858ef926e02d8d0e8407a23
+      CodeUri: s3://zlick-bucket/d3d5148564484f5c3c522b43139bbba0
       Events:
         ProxyApiGreedy:
           Properties:
